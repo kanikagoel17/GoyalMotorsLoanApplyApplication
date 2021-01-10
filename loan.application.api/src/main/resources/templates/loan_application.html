@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New Loan Id</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+</head>
+<body>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2 style="text-align:center;color:Tomato;">Loan Application</h2>
+            <form th:action="@{/apply}" th:object="${loanApplication}" method="post">
+				          	
+					<div class="col-md-6 form-group">
+					   <h3>Customer Details</h3>
+					 </div>
+					<div class="form-row">					   
+						<div class="col-md-6 form-group">
+						    <label>First Name</label>
+						    <input type="text" class="form-control" th:field="*{firstName}" name="firstName" id="firstName">
+						</div>
+						<div class="col-md-6 form-group">
+						    <label>Last Name</label>
+						    <input type="text" class="form-control" th:field="*{lastName}" name="lastName" id="lastName">
+						</div>
+						<div class="col-md-6 form-group">
+						    <label>Phone Number</label>
+						    <input type="number"  class="form-control" th:field="*{phoneNum}" name="phoneNum"id="phoneNum">
+						 </div>
+						<div class="col-md-6 form-group">
+						    <label>Email</label>
+						    <input type="text"  class="form-control" th:field="*{email}" name="email" id="email">
+						</div>
+				
+				</div>
+									
+					
+					<div class="col-md-6 form-group">
+					    <h3>Address Details</h3>
+					</div>
+					<div class="form-row">
+						<div class="col-md-6 form-group">
+							<label>Address1</label>
+							<input type="text"  class="form-control" th:field="*{addressLine1}" name="addressLine1" id="addressLine1">
+						</div>
+					<!--  <div class="col-md-6 form-group">
+					    <label>Address2</label>
+					    <input type="text"  class="form-control" th:field="*{Address2}">
+					</div>-->
+						<div class="col-md-6 form-group">
+							<label>City</label>
+							<input type="text"  class="form-control" th:field="*{city}" name="city" id="city">
+						</div>
+						<div class="col-md-6 form-group">
+							<label>State</label>
+							<input type="text"  class="form-control" th:field="*{state}" name="state" id="state">
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Pincode</label>
+							<input type="number"  class="form-control" th:field="*{pincode}" name="pinCode" id="pinCode">
+						</div>
+					</div>
+				
+									
+				<div class="col-md-6 form-group">
+				<h3>Personnal Details</h3>
+				</div>
+				<div class="form-row">
+					<div class="col-md-6 form-group">
+						<label>Aadhar number</label>
+						<input type="number"  class="form-control" th:field="*{adharCardNo}" name="adharCardNo">
+					</div>
+					<div class="col-md-6 form-group">
+						<label>Pan Card Number</label>
+						<input type="number"  class="form-control" th:field="*{panCardNo}" name="panCardNo">
+					</div>					
+				</div>
+					
+				
+					<div class="col-md-6 form-group">
+						<h3>Gauranter Details</h3>
+					</div>
+					<div class="form-row">
+						<div class="col-md-6 form-group">
+							<label>First Name</label>
+							<input type="text"  class="form-control" th:field="*{guaranterFirstName}" name="guaranterFirstName">
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Last Name</label>
+							<input type="text"  class="form-control" th:field="*{guaranterLastName}" name="guaranterLastName">
+						</div>
+						<div class="col-md-6 form-group">
+							<label>Phone number</label>
+							<input type="number"  class="form-control" th:field="*{guaranterPhoneNum}" name="guaranterPhoneNum">
+						</div>
+					</div>
+				
+				<button type="submit" class="btn btn-primary btn-block mt-3">Save</button>
+				<button type="button" class="btn btn-primary btn-block mt-3" onclick="window.history.back();" style="margin-right:10px;">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 
+</body>
+</html> 
